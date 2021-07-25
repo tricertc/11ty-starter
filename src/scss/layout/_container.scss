@@ -1,0 +1,17 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.container-fluid {
+  width: 100%;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+
+  @each $size, $breakpoint in $breakpoints {
+    @include media-up($size) {
+      max-width: min($breakpoint, $max-container-width);
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@use 'sass:map';
+@use 'variables' as *;
+
+@mixin media-up($size) {
+  $breakpoint: map.get($breakpoints, $size);
+
+  @if ($breakpoint == null) {
+    @error "No breakpoint set for size '#{$size}'.";
+  }
+
+  @media (min-width: $breakpoint) {
+    @content;
+  }
+}

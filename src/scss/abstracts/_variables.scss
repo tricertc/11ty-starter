@@ -1,0 +1,15 @@
+@use 'sass:map';
+
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+$base-font-stack: 'Poppins', sans-serif;
+$base-font-size: 16px;
+
+$breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px,
+);
+
+$max-container-width: map.get($breakpoints, 'xl');

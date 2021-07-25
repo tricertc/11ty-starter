@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as *;
+
+html {
+  font-family: $base-font-stack;
+  font-size: $base-font-size;
+}
+
+body {
+  line-height: 1.5;
+}
